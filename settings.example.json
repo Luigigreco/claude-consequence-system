@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "TOOL=$(echo $CLAUDE_CONTEXT | jq -r '.tool_name // \"\"'); ~/.claude/scripts/check-strikes.sh 2>/dev/null | grep -q 'LOCKDOWN' && [ \"$TOOL\" = \"Task\" ] && echo 'BLOCKED: Tool lockdown active' && exit 1 || exit 0"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo $CLAUDE_CONTEXT | ~/.claude/scripts/detect-violation.sh 2>/dev/null || true"
+          }
+        ]
+      }
+    ]
+  }
+}
