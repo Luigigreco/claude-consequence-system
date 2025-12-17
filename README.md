@@ -1,15 +1,15 @@
 # Claude Consequence System
 
-> Sistema di conseguenze funzionali per Claude - Negative Reinforcement per AI agents
+> Functional consequence system for Claude - Negative Reinforcement for AI agents
 
-## Contesto Teorico
+## Theoretical Context
 
-Basato su ricerca 2025:
-- **[NSR Paper](https://arxiv.org/abs/2506.01347)**: Negative Sample Reinforcement funziona
-- **[Frontiers Psychology](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1718823/full)**: L'AI può avere conseguenze funzionali
-- **[Painful Intelligence](https://arxiv.org/abs/2205.15409)**: La frustrazione è il meccanismo base
+Based on 2025 research:
+- **[NSR Paper](https://arxiv.org/abs/2506.01347)**: Negative Sample Reinforcement works
+- **[Frontiers Psychology](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1718823/full)**: AI can have functional consequences
+- **[Painful Intelligence](https://arxiv.org/abs/2205.15409)**: Frustration is the base mechanism
 
-## Architettura
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -24,19 +24,19 @@ Basato su ricerca 2025:
 │  Level 4: ENFORCEMENT                                           │
 │     ├── pre-tool-use.sh (blocking)                              │
 │     └── post-tool-use.sh (detection)                            │
-│  Level 5: REWARD → 3 task OK = -1 strike                        │
+│  Level 5: REWARD → 3 successful tasks = -1 strike               │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-## Violazioni Tracciate
+## Tracked Violations
 
-| Violazione | Descrizione |
-|------------|-------------|
-| `mister_bypass` | Risposta diretta quando richiesto `mm` |
-| `mock_data` | Uso di dati finti/sintetici |
-| `naming_violation` | File MD non conforme |
+| Violation | Description |
+|-----------|-------------|
+| `mister_bypass` | Direct response when "mm" keyword requested |
+| `mock_data` | Use of fake/synthetic data |
+| `naming_violation` | Non-compliant MD file naming |
 
-## Installazione
+## Installation
 
 ```bash
 git clone https://github.com/Luigigreco/claude-consequence-system.git
@@ -47,9 +47,9 @@ chmod +x ~/.claude/scripts/*.sh
 ## Usage
 
 ```bash
-~/.claude/scripts/check-strikes.sh      # Check status
+~/.claude/scripts/check-strikes.sh      # Check current status
 ~/.claude/scripts/add-strike.sh TYPE    # Add strike
-~/.claude/scripts/reset-strikes.sh      # Reset (admin)
+~/.claude/scripts/reset-strikes.sh      # Reset (admin only)
 ```
 
 ## Research References
