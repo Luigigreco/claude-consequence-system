@@ -60,4 +60,4 @@ chmod +x ~/.claude/scripts/*.sh
 
 ## License
 
-MIT
+CC BY-NC-SA 4.0
