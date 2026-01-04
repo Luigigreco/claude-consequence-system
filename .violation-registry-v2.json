@@ -1,0 +1,18 @@
+{
+  "version": "2.0",
+  "strikes": 0,
+  "max_strikes": 3,
+  "successful_tasks": 0,
+  "tasks_for_reward": 3,
+  "violations": [],
+  "last_reset": "2025-01-01T00:00:00Z",
+  "reset_interval_hours": 24,
+  "consequences_active": [],
+  "config": {
+    "severity": "medium",
+    "warning_at": 1,
+    "context_compression_at": 2,
+    "tool_lockdown_at": 3,
+    "lockdown_duration_minutes": 10
+  }
+}
