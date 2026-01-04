@@ -16,7 +16,7 @@ set -euo pipefail
 VIOLATION_TYPE="${1:-unknown}"
 DESCRIPTION="${2:-No description provided}"
 REGISTRY_PATH="$HOME/.claude/.violation-registry-v2.json"
-TEMP_REGISTRY="/tmp/claude-registry-update-$(date +%s).json"
+TEMP_REGISTRY="/tmp/claude/claude-registry-update-$(date +%s).json"
 TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 
 # Color codes for output
