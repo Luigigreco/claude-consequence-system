@@ -37,6 +37,29 @@ In `PostToolUse.hooks` array, add:
 
 3. Restart Claude Code
 
+---
+
+## macOS-Specific Installation
+
+### Requirements
+```bash
+# Install jq (required dependency)
+brew install jq
+
+# Verify installation
+jq --version
+```
+
+### Permission Issues?
+If you encounter "Operation not permitted" errors:
+
+1. Use v2 files (automatic in new installations)
+2. Or run: `~/.claude/scripts/add-strike-v2.sh` as workaround
+
+See [TROUBLESHOOTING.md](TROUBLESHOOTING.md) for detailed fixes.
+
+---
+
 ## Verify Installation
 
 ```bash
